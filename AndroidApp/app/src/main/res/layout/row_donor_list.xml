@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:contentPadding="10dp"
+        card_view:cardBackgroundColor="@color/colorPrimary"
+        card_view:cardElevation="4dp"
+        card_view:cardMaxElevation="6dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/linear_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/thumbnail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_launcher"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_crop_type"
+                    android:text="Hello Card"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_farmer"
+                    android:text="Hello Card"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

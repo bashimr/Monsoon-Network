@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:paddingLeft="2dp"
+        android:text=" To mark the boundary of the crop, mark the  corners of the field by clicking 'Pin Coordinates' at each corner" />
+
+    <TextView
+        android:id="@+id/txt_lat_long"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_instruction"
+        android:padding="2dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_lat_long">
+
+        <Button
+            android:id="@+id/btn_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Pin" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="clear" />
+
+        <TextView
+            android:id="@+id/txt_accuracy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="top"
+            android:padding="25dp" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_bottom"
+        android:layout_below="@+id/linear_1"
+        tools:context="solution.chain.blocki.blockchainsolution.MapsActivity" />
+
+    <LinearLayout
+        android:id="@+id/linear_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_save_bounndry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:layout_weight="2"
+            android:text="Save Crop Boundry" />
+
+        <Button
+            android:id="@+id/btn_join"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="2"
+            android:enabled="false"
+            android:text="Join End Point" />
+
+        <Button
+            android:id="@+id/btn_capture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="2"
+            android:text="Capture Place" />
+
+    </LinearLayout>
+
+</RelativeLayout>

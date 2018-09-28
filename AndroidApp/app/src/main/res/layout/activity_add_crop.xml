@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apptellect.activity.AddCropActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        >
+
+        <ScrollView
+            android:id="@+id/linear_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linear_btn">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:text="@string/crop_type"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/spinner_crops"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/grey"
+                        android:padding="10dp"
+                        android:textColor="@color/black"></Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextAppearStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:text="@string/crop_subtype"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/spinner_crops_sub_types"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/grey"
+                        android:padding="10dp"
+                        android:textColor="@color/black">
+
+                    </Spinner>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:text="@string/crop_area"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/edt_crop_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:text="@string/seeding_date"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/edt_seeding_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:focusable="false"
+                        android:inputType="numberDecimal"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:text="Status"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/spinner_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/grey"
+                        android:padding="10dp">
+
+                    </Spinner>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:text="@string/harvest_date"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/edt_harvest_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:focusable="false"
+                        android:inputType="numberDecimal"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:text="@string/currency"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/spinner_currency"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/grey"
+                        android:padding="10dp"
+                        android:textColor="@color/black">
+
+                    </Spinner>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:text="@string/yield_value"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/edt_yield"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:inputType="numberDecimal"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:text="@string/gps_coordinate"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:paddingRight="30dp">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_gps"
+                                    android:layout_width="100dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/gps_icon" />
+
+                                <LinearLayout
+                                    android:id="@+id/linear_images"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:text="@string/picture"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/camera_crop" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linear_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/ButtonAppearStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:background="@drawable/button_danger"
+                android:text="@string/submit" />
+
+            <Button
+                style="@style/ButtonAppearStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/button_danger"
+                android:visibility="gone"
+                android:text="@string/cancel" />
+
+            <Button
+                style="@style/ButtonAppearStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2"
+                android:background="@drawable/button_danger"
+                android:text="@string/delete"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

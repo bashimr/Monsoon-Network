@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apptellect.activity.VerificationCodeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/crop">
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="70dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+        <LinearLayout
+            android:background="@drawable/linear_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    style="@style/TextAppearStyle"
+                    android:textSize="20sp"
+                    android:text="@string/verfiy_code"/>
+                <TextView
+                    android:id="@+id/txt_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/TextAppearStyle"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:text="@string/verfiy_msg"/>
+                <TextView
+                    android:id="@+id/txt_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/TextAppearStyle"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:text="@string/verfiy_msg"/>
+                <EditText
+                        android:id="@+id/edittext_code"
+                        style="@style/TextAppearStyle"
+                        android:layout_width="140dp"
+                        android:letterSpacing="1"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="7dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:lines="1"
+                        android:maxLength="4"
+                        android:maxLines="1" />
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:text="Submit Code"
+                    style="@style/ButtonAppearStyle"
+                    android:layout_marginTop="25dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_bg"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <Button
+                    android:id="@+id/btnEditNo"
+                    android:text="Edit Mobile Number"
+                    style="@style/ButtonAppearStyle"
+                    android:layout_marginTop="25dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_bg"
+                    android:drawablePadding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

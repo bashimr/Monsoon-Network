@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/crop"
+        android:orientation="vertical"
+
+
+        >
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/linear_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_mobile_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="false"
+                    app:errorTextAppearance="@style/MyErrorText"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/edittext_mobileno"
+                        style="@style/TextAppearStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/mobile"
+                        android:drawablePadding="7dp"
+                        android:hint="Enter Mobile Number"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+                </android.support.design.widget.TextInputLayout>
+                <!--<RadioGroup-->
+                <!--android:layout_margin="20dp"-->
+                <!--android:id="@+id/radio_group_role"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/radioButton1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Farmer"-->
+                <!--style="@style/MyRadioButtonStyle"-->
+                <!--android:checked="true"-->
+                <!--android:textSize="20sp"/>-->
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/radioButton2"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--style="@style/MyRadioButtonStyle"-->
+                <!--android:text="Donor"-->
+                <!--android:textSize="20sp"/>-->
+
+                <!--</RadioGroup>-->
+                <Spinner
+                    android:id="@+id/spinner_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/white"></Spinner>
+
+                <Button
+                    android:id="@+id/btnSend"
+                    style="@style/ButtonAppearStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/btn_bg"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Send Verification Code"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
