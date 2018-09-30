@@ -17,7 +17,7 @@
     "composer-network"
   ],
   "author": "Imran Bashir",
-  "email": "imran@apptellect.com",
+  "email": "info@apptellect.com",
   "license": "Apache-2.0",
   "devDependencies": {
     "composer-admin": "^0.20.0",
